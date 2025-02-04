@@ -3,12 +3,14 @@ package com.dev.backend.services;
 import com.dev.backend.entity.Marca;
 import com.dev.backend.repository.MarcaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 
 import java.util.Date;
 import java.util.List;
-
+@Service
 public class MarcaService {
-    @Autowired
+    @Autowired(required = true)
     private MarcaRepository marcaRepository;
     public List<Marca> list(){
         return marcaRepository.findAll();

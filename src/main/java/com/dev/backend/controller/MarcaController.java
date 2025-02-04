@@ -1,6 +1,5 @@
 package com.dev.backend.controller;
 
-import com.dev.backend.entity.Categoria;
 import com.dev.backend.entity.Marca;
 import com.dev.backend.services.MarcaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/marca")
 public class MarcaController {
-
     @Autowired
     private MarcaService marcaService;
     @GetMapping("/")
