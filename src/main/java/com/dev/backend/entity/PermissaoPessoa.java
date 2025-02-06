@@ -4,23 +4,23 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
-
 @Entity
-@Table(name = "permissao")
+@Table(name = "permissao_pessoa")
 @Data
-public class Permissao {
+public class PermissaoPessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private String nome;
 
     @ManyToOne
-    @JoinColumn(name="idPessoa")
-    private Pessoa pessoa;
-
-    @ManyToOne
-    @JoinColumn(name="idPermissao")
+    @JoinColumn(name = "idPermissao")
     private Permissao permissao;
 
+
+    @ManyToOne
+    @JoinColumn(name = "idPessoa")
+    private Pessoa pessoa;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date created_at;

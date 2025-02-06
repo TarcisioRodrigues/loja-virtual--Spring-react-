@@ -31,11 +31,13 @@ public class ProdutoImagensService {
         try {
             if (!file.isEmpty()) {
                 byte[] bytes = file.getBytes();
+                String nomeImagem=String.valueOf(produto.getId()) + file.getOriginalFilename();
                 Path caminho = Paths
-                        .get("c:/imagens/" + String.valueOf(produto.getId()) + file.getOriginalFilename());
+                        .get("C:\\Users\\Tarcisio Rodrigues\\Imagens" + nomeImagem + "_image.jpg");
+                System.out.println(caminho+"Aqui");
                 Files.write(caminho, bytes);
 
-                produtosImg.setNome(String.valueOf(produto.getId()) + file.getOriginalFilename());
+                produtosImg.setNome(nomeImagem);
 
 
             }

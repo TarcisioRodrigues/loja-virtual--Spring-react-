@@ -13,8 +13,9 @@ public class Cidade {
         private Long id;
         private String nome;
         @ManyToOne
-        @JoinColumn(name = "idEstado")
+        @JoinColumn(name = "idEstado")  // Verifique se o nome está correto
         private Estado estado;
+
         @Temporal(TemporalType.TIMESTAMP)
         private Date created_at;
         @Temporal(TemporalType.TIMESTAMP)
