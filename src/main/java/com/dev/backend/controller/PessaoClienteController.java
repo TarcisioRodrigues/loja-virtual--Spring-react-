@@ -1,6 +1,8 @@
 package com.dev.backend.controller;
 
+import com.dev.backend.dto.PessoaClienteRequestDTO;
 import com.dev.backend.entity.Pessoa;
+import com.dev.backend.services.PessoaClienteService;
 import com.dev.backend.services.PessoaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,11 +14,12 @@ import java.util.List;
 @RequestMapping("/api/pessoa")
 public class PessaoClienteController {
     @Autowired
-    private PessoaService pessoaService;
+    private PessoaClienteService pessoaClienteService;
 
     @PostMapping("/create")
-    public Pessoa create(@RequestBody Pessoa pessoa){
-        return pessoaService.create(pessoa);
+    public Pessoa create(@RequestBody PessoaClienteRequestDTO pessoaClienteRequestDTO){
+
+        return pessoaClienteService.create(pessoaClienteRequestDTO);
     }
 
 }
