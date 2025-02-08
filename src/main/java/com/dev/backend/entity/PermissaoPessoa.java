@@ -1,5 +1,6 @@
 package com.dev.backend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -20,6 +21,7 @@ public class PermissaoPessoa {
 
     @ManyToOne
     @JoinColumn(name = "idPessoa")
+    @JsonIgnore
     private Pessoa pessoa;
 
     @Temporal(TemporalType.TIMESTAMP)

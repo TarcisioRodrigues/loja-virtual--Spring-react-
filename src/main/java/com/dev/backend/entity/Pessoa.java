@@ -53,5 +53,6 @@ public class Pessoa {
         for(PermissaoPessoa p:pp){
             p.setPessoa(this);
         }
+        this.permissaoPessoas=pp;
     }
 }

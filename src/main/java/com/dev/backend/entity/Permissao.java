@@ -13,13 +13,7 @@ public class Permissao {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name="idPessoa")
-    private Pessoa pessoa;
-
-    @ManyToOne
-    @JoinColumn(name="idPermissao")
-    private Permissao permissao;
+    private String nome;
 
 
     @Temporal(TemporalType.TIMESTAMP)
