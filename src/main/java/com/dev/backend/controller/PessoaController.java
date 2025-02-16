@@ -1,6 +1,5 @@
 package com.dev.backend.controller;
 
-import com.dev.backend.entity.Estado;
 import com.dev.backend.entity.Pessoa;
 import com.dev.backend.services.PessoaService;
 import org.springframework.beans.factory.annotation.Autowired;

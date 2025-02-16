@@ -6,10 +6,11 @@ import com.dev.backend.entity.Pessoa;
 import com.dev.backend.repository.PermissaoPessoaRepository;
 import com.dev.backend.repository.PermissaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
-
+@Service
 public class PermissaoPessoaService {
 
     @Autowired
