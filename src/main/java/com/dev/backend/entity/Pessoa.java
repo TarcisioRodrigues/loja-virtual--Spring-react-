@@ -33,7 +33,9 @@ public class Pessoa {
 
     @NotBlank(message = "O endereço não pode ser vazio")
     private String endereco;
-
+    private  String codigoRecuperacaoSenha;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date dataEnvioCodigo;
     @NotBlank(message = "O CEP não pode ser vazio")
     private String cep;
     @ManyToOne
