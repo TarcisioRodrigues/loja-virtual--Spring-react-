@@ -31,6 +31,7 @@ public class Pessoa {
     @Email(message = "E-mail inválido")
     private String email;
 
+    private String senha;
     @NotBlank(message = "O endereço não pode ser vazio")
     private String endereco;
     private  String codigoRecuperacaoSenha;
